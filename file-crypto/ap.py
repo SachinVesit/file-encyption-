@@ -1,4 +1,4 @@
-#from flask import Flask, redirect, request, make_response, render_template
+from flask import Flask, redirect, request, make_response, render_template
 from flask import *
 from connection import *
 import os
