@@ -1,0 +1,70 @@
+@media only screen and (max-width : 768px) {
+	.top-header p{
+        text-align:center !important;
+    }
+    .navbar-brand img{
+        width: 200px !important;
+    }
+    .testimonial-content{
+    	padding:20px;
+    	text-align: justify; 
+    }
+    .home-section-1 .why-main {
+    	padding: 10px 20px;
+	}
+	.navbar .navbar-collapse{
+		height: 100%;
+		text-align: center;
+	}
+	.inner-slider:before,
+	.slider-right-border:before,
+	.slider-left-border:before {
+	    display: none;
+	    content: '';
+	}
+	.topper .science-topper,
+	.topper .ten-topper{
+		clip-path: none;
+	}
+	.form-control:focus{
+		border: none !important
+	}
+	.science-topper .owl-carousel .item{
+		margin-left: 0px;
+	}
+	.topper-image{
+		margin-top: 0px !important;
+	}
+	.topper .ten-topper{
+		padding-top: 25px;
+	}
+}
+@media only screen and (max-width : 576px) {
+    .navbar-brand img{
+        width: 240px !important;
+    }
+    .inner-slider{
+    	padding: 12px 0px; 
+    }
+    .learn-more{
+    	margin-bottom: 20px;
+    }
+	.main-footer .design p{
+		padding-left: 0px !important;
+		margin-left: 0px !important;
+	}
+	.slider{
+		display: contents;
+	}
+	.main-slider .carousel-indicators{
+		width: 80px;
+	}
+	.carousel .carousel-indicators li{
+    	width: .625rem !important;
+    	height: .625rem !important;
+    	-webkit-border-radius: 50%;
+    	border-radius: 50%;
+    	cursor: pointer;
+    	margin-top:2px;
+	}
+}

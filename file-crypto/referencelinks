@@ -1,0 +1,74 @@
+Atlas:
+mongodb+srv://Abhijit_Pradhan:<password>@hybridcyrptographycluster1-sodfr.mongodb.net/test
+
+Links:
+http://youtube.com/watch?v=3ZS7LEH_XBgd
+https://www.youtube.com/watch?v=pqvKv3P18yY
+https://www.youtube.com/watch?v=0pqTHfyu5SQ (myskills)
+
+Dependencies:
+python.exe   (https://www.python.org/downloads/)
+visualcode.exe (editor)   (https://code.visualstudio.com/download)
+mongodb server (mongodb compass)  .msi file https://www.mongodb.com/download-center/community
+
+<!-- {% extends 'user_masterpage.html' %} -->
+<!-- {% extends "owner_masterpage.html" %} -->
+Steps for mongodb:
+1. offline database without  atlas
+open cmd
+mongoD
+mongo (see connect failed error)
+if error then open task manager under services dialog box restart mongodb
+then start the mongodb compass
+
+2. Mongo Atlas connection
+
+Admin module:
+file upload
+view files 
+view split database
+view request
+
+
+user module:
+view files
+verify 
+
+
+commmon file:
+home
+logout
+login
+register
+
+# session code
+session['user'] = Admin     # create session
+session.pop('user',none)    # delete session
+    # create g object ( decorator is used @app.before_request)
+    g.user =  none
+    if 'user' in session:
+        g.user = session['user']
+
+    # verify login
+    if g.user:
+        return login
+
+# cookies code
+    # set cookie
+    make_response object
+    object.set_cookies('key','value')
+    # get cookie
+    a = request.cookie.get('key')
+
+# three master page
+1. main home (without login)
+2. admin master page
+3. user master page ()
+
+
+
+
+http://flask.palletsprojects.com/en/1.1.x/patterns/templateinheritance/
+https://www.quora.com/How-do-I-create-a-master-web-page-using-a-Python-and-Flask-framework
+
+

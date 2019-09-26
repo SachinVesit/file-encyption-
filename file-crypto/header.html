@@ -1,0 +1,59 @@
+
+<section class="container-fluid px-0">
+    <div>
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-lg">
+
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="{{ url_for('home') }}"><!-- <img src="images/logo.png"> -->
+        	<h3>File Cryptography</h3>
+        </a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fa fa-bars"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+          <!-- Links -->
+	        <ul class="navbar-nav ml-auto">
+	            <li class="nav-item">
+	                <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+	            </li>
+<!-- 
+	            <li class="nav-item">
+	             	<a href="file-upload.php" class="nav-link">file-upload</a> 
+	            </li>
+
+	            <li class="nav-item">
+	                <a class="nav-link" href="file-view.php">file-vew</a>
+	            </li>
+
+	            <li class="nav-item dropdown">
+	                <a class="nav-link" href="view-request.php">view-request</a>    
+	            </li>
+
+	            <li class="nav-item dropdown">
+	                <a class="nav-link" href="#">verify</a>    
+	            </li> -->
+
+	            <li class="nav-item">
+	                <a class="nav-link" href="register.php">register </a>
+	            </li>
+
+	            <li class="nav-item dropdown">
+	                <a class="nav-link" href="login.php">login</a>
+	            </li>
+          	</ul>
+        </div>
+        <!-- Collapsible content -->
+
+      </nav>
+      <!--/.Navbar-->
+	</div>
+	{% endblock %}
+  </section>
+

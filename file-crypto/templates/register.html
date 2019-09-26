@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#0a0b39">
+  <title>File Cryptography</title>
+ <!--  <link rel="icon" href="images/fevicon.png"> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="/static/css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="/static/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/static/css/responsive.css">
+
+</head>
+
+<body>
+
+<!-- Header -->
+  <section class="container-fluid px-0">
+    <div>
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-lg">
+
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="{{ url_for('home') }}"><!-- <img src="images/logo.png"> -->
+        	<h3>File Cryptography</h3>
+        </a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fa fa-bars"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+          <!-- Links -->
+	        <ul class="navbar-nav ml-auto">
+	            <li class="nav-item">
+	                <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+	            </li>
+
+	            <li class="nav-item">
+	                <a class="nav-link" href="{{ url_for('hrefmethod',a='register') }}">register </a>
+	            </li>
+
+	            <li class="nav-item dropdown">
+	                <a class="nav-link" href="{{ url_for('hrefmethod',a='login') }}">login</a>
+	            </li>
+          	</ul>
+        </div>
+        <!-- Collapsible content -->
+
+      </nav>
+      <!--/.Navbar-->
+    </div>
+  </section>
+
+  
+<!-- /.Header -->
+  <section class="login">
+   <div class="container">
+      <div class="d-flex justify-content-center h-100">
+        <div class="card">
+          <div class="card-header">
+            <h3>Sign Up</h3>
+            <!-- <div class="d-flex justify-content-end social_icon">
+              <span><i class="fab fa-facebook-square"></i></span>
+              <span><i class="fab fa-google-plus-square"></i></span>
+              <span><i class="fab fa-twitter-square"></i></span>
+            </div> -->
+          </div>
+          <div class="card-body">
+            <form action="http://127.0.0.1:5000/Register" method="POST">
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" name="name_txtbox" class="form-control" placeholder="Name">
+                
+              </div>
+
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                </div>
+                <input type="email" name="username_txtbox" class="form-control" placeholder="Email">
+              </div>
+
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                </div>
+                <input type="number" name="ContactNo._txtbox" class="form-control" placeholder="Contact No.">
+              </div>
+
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                </div>
+                <input type="password" name="password_txtbox" class="form-control" placeholder="password">
+              </div>
+              
+              <!-- <div class="row align-items-center remember">
+                <input type="checkbox">Remember Me
+              </div> -->
+               <div class="form-group">
+                <input type="submit" value="Register" class="btn float-right login_btn">
+              </div>
+            </form>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex justify-content-center links text-white">                                                                                              
+              Already have an account? <a href="{{ url_for( 'hrefmethod', a = 'login' ) }}" class="text-white ml-3"> Sign In</a>
+            </div>
+           <!--  <div class="d-flex justify-content-center">
+              <a href="#" class="text-white">Forgot your password?</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer -->
+  <footer class="home-subscribe">
+    <div class="container">    
+    </div>
+  </footer>
+
+  <footer>
+    <div class="container-fluid main-footer">
+      <div class="row">
+        <div class="col-sm-12 col-md-7 col-lg-7 px-0">
+          <p class="text-light pt-3 pl-5">Copyright © 2019 File Cryptography</p>
+        </div>
+
+        <div class="col-sm-12 col-md-5 col-lg-5 px-0 text-center design">
+          <p class="text-light ml-5 pl-5 mt-3">Design and Developed by <a href="https://studyleagueit.com/" target="_blank">Studyleague IT Solution</a></p>
+        </div>
+      </div>
+    </div>  
+  </footer>
+
+<!-- /.Footer -->
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="/static/js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="/static/js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="/static/js/mdb.min.js"></script>
+
+  <script type="text/javascript" src="/static/js/custom.js"></script>
+</body>
+
+</html>

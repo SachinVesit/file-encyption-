@@ -1,0 +1,34 @@
+{% if g.role == 'user' or g.role == 'User' %}
+{% extends 'user_masterpage.html' %}
+{% else %}
+{% extends 'owner_masterpage.html' %}
+{% endif %}
+{% block content_page %}  
+<section class="container my-5 view-file">
+    <div class="table-responsive ">
+      
+      <table class="table table-bordered text-center">
+        <tbody>
+          <tr>
+            <th>ID</th>
+            <th>File Name</th>
+            <th>File Content</th>
+            <th >Date</th>
+            <th>Owner</th>
+            <th>Split</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>study.txt</td>
+            <td>Studyleague It Solutions</td>
+            <td>2019-09-18</td>
+            <td>Studyleague IT Solutions</td>
+            <td><a href="#">click</a></td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+{% endblock %}

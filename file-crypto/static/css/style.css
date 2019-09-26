@@ -1,0 +1,194 @@
+/*gloabal*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Acme', sans-serif;
+}
+
+.navbar-brand h3{
+	color: #000;
+	font-weight: 600;
+}
+
+.navbar-toggler span{
+	color: #0a0b39;
+	border: 2px solid #0a0b39;
+	padding: 5px 10px;
+	border-radius: 8px;
+}
+
+.top-header{
+	background-color: #0a0b39;
+}
+
+.top-header p{
+	color: #fff;
+}
+
+.navbar .navbar-collapse .navbar-nav li{
+	padding: 10px 7px;
+}
+
+.navbar .navbar-collapse .navbar-nav li a{
+	color: #000;
+	font-size: 22px;
+	text-transform: capitalize;
+}
+
+/*login-form*/
+
+.login{
+	background-image: url('../images/banner.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+	padding: 14vw 0vw;
+}
+
+.login .card{
+	width: 400px;
+	background-color: rgba(0,0,0,0.5) !important;
+}
+
+.login .social_icon span{
+	font-size: 60px;
+	margin-left: 10px;
+	color: #FFC312;
+}
+
+.login .social_icon span:hover{
+	color: white;
+	cursor: pointer;
+}
+
+.login .card-header h3{
+	color: white;
+}
+
+.login .social_icon{
+	position: absolute;
+	right: 20px;
+	top: -45px;
+}
+
+.login .input-group-prepend span{
+	width: 50px;
+	background-color: #FFC312;
+	color: black;
+	border:0 !important;
+}
+
+.login input:focus{
+	outline: 0 0 0 0  !important;
+	box-shadow: 0 0 0 0 !important;
+
+}
+
+.login .remember{
+	color: white;
+}
+
+.login .remember input
+{
+	width: 20px;
+	height: 20px;
+	margin-left: 15px;
+	margin-right: 5px;
+}
+
+.login .login_btn{
+	color: black;
+	background-color: #FFC312;
+}
+
+.login .login_btn:hover{
+	color: black;
+	background-color: white;
+}
+.login .link a,
+.login .link{
+	color: #fff;
+}
+
+/*view file*/
+
+.view-file table tr th{
+	color: red;
+	font-weight: 600;
+}
+
+.view-file table tr td a{
+	color: blue;
+}
+
+/*footer*/
+.footer-icon .btn-floating i{
+	height: 50px;
+    width: 50px;
+    font-size: 26px;
+    line-height: 49px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+   text-shadow: #000 1px 1px 0px; 
+}
+
+.fa-twitter{
+	background-color: #00acee;
+}
+
+.fa-facebook-f{
+	background-color: #3b5998;
+}
+
+.fa-google-plus-g{
+	background-color: rgb(221, 75, 57);
+}
+
+.fa-linkedin-in{
+	background-color: #0077B5;
+}
+
+.fa-instagram{
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+.fa-youtube{
+	background-color: #c4302b
+}
+
+.main-footer{
+	background-color: rgb(10,11,57);
+}
+
+.main-footer a{
+	color: #fff;
+}
+
+.footer-social a{
+    margin: 0px 4px ;
+}
+
+.footer-social a i{
+	line-height: 40px;
+	text-align: center;
+	color: #fff !important;
+    border-radius: 50%;
+	height: 40px; 
+	width: 40px;
+}
+
+.footer-social{
+	margin-top: 7px;
+}
