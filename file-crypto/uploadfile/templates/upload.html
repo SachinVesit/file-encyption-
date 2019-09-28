@@ -1,0 +1,29 @@
+<!doctype html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <title>Upload new File</title>
+    </head>
+    <h1>Upload new File</h1>
+    <form action="http://127.0.0.1:5000/upload" method="post" enctype=multipart/form-data>
+      <input type=file name=file>
+      <input type=submit value=Upload>
+      <br><br>
+
+      {% if error %}
+      <div class="alert alert-danger">
+          <strong>Danger!</strong> {{ error }}
+      </div>
+      <!-- <p>{{ error }}</p> -->
+      {% endif %}
+
+      {% if d %}
+      <!-- <p>{{ d }}</p> -->
+      <div class="alert alert-success">
+          <strong>Success!</strong> {{ d }}
+      </div>
+      {% endif %}
+          
+    </form>
+</html>

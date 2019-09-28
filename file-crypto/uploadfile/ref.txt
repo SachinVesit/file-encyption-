@@ -1,0 +1,16 @@
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <script>
+      var messages = {{ messages | safe }};
+      for (var i=0; i<messages.length; i++) {
+        alert(messages[i]);
+      }
+    </script>
+  {% endif %}
+{% endwith %}
+
+    filename = secure_filename(file1.filename)
+		file1.save(os.path.join(app.config['UPLOAD_FOLDER'],filename))
+		flash('File Uploaded')
+		return redirect(url_for('ownerhome', a = "file-view"))
+autopep8 -i ap.py
