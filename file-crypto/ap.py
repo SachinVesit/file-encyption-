@@ -1,10 +1,15 @@
-from flask import Flask, redirect, request, make_response, render_template
+# from flask import Flask, redirect, request, make_response, render_template
 from flask import *
 from connection import *
+from werkzeug.utils import secure_filename
 import os
 # app = Flask(__name__)
 app = Flask(__name__, static_url_path='/static')
 app.secret_key = os.urandom(24)
+UPLOAD_FOLDER = '/temp/'
+ALLOWED_EXTENSIONS = set(['txt'])
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
 @app.route('/')
 def home():
 	return render_template('index.html')
@@ -43,7 +48,7 @@ def register():
 	contact_no = request.form['ContactNo._txtbox']
 	password = request.form['password_txtbox']
 	try:
-		db.Cryptography.insert(
+		db.Cryptography.insert_one(
 			 {
 			  'name': name,
 			  'email': username, 
@@ -84,6 +89,41 @@ def userhome(a):
 		return " <html><h1>#</h1> </html>"
 	elif a == "file-view":
 		return render_template('file-view.html')
-	
+
+def getextension(filename):
+    return '.' in filename and filename.rsplit('.',1)[1].lower() in ALLOWED_EXTENSIONS
+
+@app.route('/upload',methods = ["POST"])
+def upload():
+	# check if the post request has the file part
+	if 'file' not in request.files:
+		return render_template('file-upload.html', error="file not selected")
+	file1 = request.files['file']
+	username = request.form['username_txtbox']
+	# if user does not select file, browser also
+	# submit an empty part without filename
+	if file1.filename == '':
+		return render_template('file-upload.html', error="file not selected")
+	if file1 and getextension(file1.filename):
+		# if file1.content_type == "text/plain":
+		filename = secure_filename(file1.filename)
+		filepath = UPLOAD_FOLDER + '/' + filename
+		# res = db.Cryptography.find_one({'email': username})
+		# if res is None:
+		# 	return "Invalid username"
+
+
+		if os.path.isfile(filepath):
+			return render_template('file-upload.html', error="file already uploaded or other file with same name exist")
+		else:
+			db.uploadedfiles.insert(
+				{
+					'filename': filename
+				}
+			)
+			file1.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+			return render_template('file-upload.html', d = "file uploaded")
+
 if __name__ == "__main__":
 	app.run(debug=True)
+

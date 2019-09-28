@@ -70,5 +70,5 @@ session.pop('user',none)    # delete session
 
 http://flask.palletsprojects.com/en/1.1.x/patterns/templateinheritance/
 https://www.quora.com/How-do-I-create-a-master-web-page-using-a-Python-and-Flask-framework
-
+https://www.tutorialspoint.com/flask/flask_message_flashing.htm (alert box)
 
